@@ -9,6 +9,7 @@
 #import "ViewController+CLLocationManagerDelegate.h"
 
 @implementation ViewController (CLLocationManagerDelegate)
+
 - (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray<CLBeacon *> *)beacons inRegion:(CLBeaconRegion *)region{
     if([beacons count] != 0){
         self.major.text = [NSString stringWithFormat:@"%@",beacons[0].major];
@@ -20,7 +21,19 @@
     }
 }
 
-- (void)locationManager:(CLLocationManager *)manager rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error{
-    NSLog(@"end ...");
+- (void)locationManager:(CLLocationManager *)manager
+         didEnterRegion:(CLRegion *)region{
+    NSLog(@"进入某区域");
 }
+
+
+- (void)locationManager:(CLLocationManager *)manager
+          didExitRegion:(CLRegion *)region{
+    NSLog(@"离开某区域");
+}
+
+- (void)locationManager:(CLLocationManager *)manager rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error{
+    NSLog(@"出错 ...");
+}
+
 @end
