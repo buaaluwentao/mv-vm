@@ -16,56 +16,33 @@
 @interface Test : NSObject<CLLocationManagerDelegate>
 
 @property CLLocationManager * locationManager;
+@property BOOL b ;
 
-- (void)starting;
-
+- (BOOL) isParameterLeagalWithPattern : (NSString *)pattern parameter:(NSString *)parameter;
 @end
 
 @implementation Test
-- (instancetype)init{
-    if(self = [super init]){
-        self.locationManager = [[CLLocationManager alloc] init];
-        self.locationManager.delegate = self; // 遵循代理
-        /*if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
-            // 请求用户授权定位权限
-            [self.locationManager requestAlwaysAuthorization];
-        }*/
-        [self.locationManager requestAlwaysAuthorization];
-       
+
+- (BOOL) isParameterLeagalWithPattern : (NSString *)pattern parameter:(NSString *)parameter{
+    NSRegularExpression *regular = [[NSRegularExpression alloc] initWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:nil];
+    NSArray *results = [regular matchesInString:parameter options:0 range:NSMakeRange(0, parameter.length)];
+    if(results.count == 1){
+        NSTextCheckingResult *result =  [results objectAtIndex:0];
+        return (result.range.location == 0 && result.range.length == [parameter length]);
     }
-    return self;
+    return NO;
 }
 
-- (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray<CLBeacon *> *)beacons inRegion:(CLBeaconRegion *)region{
-    for(CLBeacon *beacon in beacons){
-        NSLog(@"%p" , beacon);
-    }
-    NSLog(@"here are %lu beacons,%@,%p" , [beacons count] ,[[region proximityUUID] UUIDString], region);
-}
-
-// 有错误产生时的回调
-- (void)locationManager:(CLLocationManager *)manager rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error{
-    NSLog(@"end ...");
-}
-
-- (void)starting{
-    NSLog(@"hello,world");
-    CLBeaconRegion *region = [[CLBeaconRegion alloc] initWithProximityUUID:[[NSUUID alloc] initWithUUIDString:BEACONUUID] identifier:@"media"];//初始化监测的iBeacon
-    region = region;
-    region.notifyOnExit = YES;
-    region.notifyOnEntry = YES;
-    region.notifyEntryStateOnDisplay = YES;
-    
-    //NSLog(@"%p",self.region);
-    [self.locationManager startRangingBeaconsInRegion:region];
-    // 停止检测区域
-    //[self.locationManager stopRangingBeaconsInRegion:region];
-}
 @end
+
 int main(int argc, char * argv[]) {
-    /*Test *test = [[Test alloc] init];
-    [test starting];
-    NSLog(@"end ...");*/
+    Test *test = [[Test alloc] init];
+    NSString *checkString = @"+000012345555";
+    //1.创建正则表达式，[0-9]:表示‘0’到‘9’的字符的集合
+    NSString *pattern = @"^\\+?[0-9][0-9]*$";
+    if([test isParameterLeagalWithPattern:pattern parameter:checkString]){
+        NSLog(@"aha");
+    }
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }

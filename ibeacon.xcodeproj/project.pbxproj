@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5518CEC1218731300032D584 /* TempViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5518CEC0218731300032D584 /* TempViewController.m */; };
 		55C64446217DA8B3006F8F47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C64445217DA8B3006F8F47 /* AppDelegate.m */; };
 		55C64449217DA8B3006F8F47 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C64448217DA8B3006F8F47 /* ViewController.m */; };
 		55C6444C217DA8B3006F8F47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C6444A217DA8B3006F8F47 /* Main.storyboard */; };
@@ -14,9 +15,13 @@
 		55C64451217DA8B4006F8F47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C6444F217DA8B4006F8F47 /* LaunchScreen.storyboard */; };
 		55C64454217DA8B4006F8F47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C64453217DA8B4006F8F47 /* main.m */; };
 		55CB9ECC21808AAE00D849B0 /* ViewController+CLLocationManagerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55CB9ECB21808AAE00D849B0 /* ViewController+CLLocationManagerDelegate.m */; };
+		55DB7C0F2187F4CF00C7C6E0 /* BulletWindowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DB7C0E2187F4CF00C7C6E0 /* BulletWindowView.m */; };
+		55DB7C122187F6FF00C7C6E0 /* TestUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 55DB7C112187F6FF00C7C6E0 /* TestUIViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5518CEBF218731300032D584 /* TempViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TempViewController.h; sourceTree = "<group>"; };
+		5518CEC0218731300032D584 /* TempViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TempViewController.m; sourceTree = "<group>"; };
 		55C64441217DA8B3006F8F47 /* ibeacon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ibeacon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C64444217DA8B3006F8F47 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		55C64445217DA8B3006F8F47 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -29,6 +34,10 @@
 		55C64453217DA8B4006F8F47 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		55CB9ECA21808AAE00D849B0 /* ViewController+CLLocationManagerDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ViewController+CLLocationManagerDelegate.h"; sourceTree = "<group>"; };
 		55CB9ECB21808AAE00D849B0 /* ViewController+CLLocationManagerDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ViewController+CLLocationManagerDelegate.m"; sourceTree = "<group>"; };
+		55DB7C0D2187F4CF00C7C6E0 /* BulletWindowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BulletWindowView.h; sourceTree = "<group>"; };
+		55DB7C0E2187F4CF00C7C6E0 /* BulletWindowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BulletWindowView.m; sourceTree = "<group>"; };
+		55DB7C102187F6FF00C7C6E0 /* TestUIViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestUIViewController.h; sourceTree = "<group>"; };
+		55DB7C112187F6FF00C7C6E0 /* TestUIViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestUIViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +81,12 @@
 				55C64453217DA8B4006F8F47 /* main.m */,
 				55CB9ECA21808AAE00D849B0 /* ViewController+CLLocationManagerDelegate.h */,
 				55CB9ECB21808AAE00D849B0 /* ViewController+CLLocationManagerDelegate.m */,
+				5518CEBF218731300032D584 /* TempViewController.h */,
+				5518CEC0218731300032D584 /* TempViewController.m */,
+				55DB7C0D2187F4CF00C7C6E0 /* BulletWindowView.h */,
+				55DB7C0E2187F4CF00C7C6E0 /* BulletWindowView.m */,
+				55DB7C102187F6FF00C7C6E0 /* TestUIViewController.h */,
+				55DB7C112187F6FF00C7C6E0 /* TestUIViewController.m */,
 			);
 			path = ibeacon;
 			sourceTree = "<group>";
@@ -147,8 +162,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				55C64449217DA8B3006F8F47 /* ViewController.m in Sources */,
+				5518CEC1218731300032D584 /* TempViewController.m in Sources */,
 				55CB9ECC21808AAE00D849B0 /* ViewController+CLLocationManagerDelegate.m in Sources */,
 				55C64454217DA8B4006F8F47 /* main.m in Sources */,
+				55DB7C0F2187F4CF00C7C6E0 /* BulletWindowView.m in Sources */,
+				55DB7C122187F6FF00C7C6E0 /* TestUIViewController.m in Sources */,
 				55C64446217DA8B3006F8F47 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
