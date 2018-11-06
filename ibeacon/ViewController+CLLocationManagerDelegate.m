@@ -23,7 +23,7 @@
 
 - (void)locationManager:(CLLocationManager *)manager
          didEnterRegion:(CLRegion *)region{
-    self.inOrOut.text = @"欢迎进入到访";
+    self.inOrOut.text = @"欢迎到访";
     NSLog(@"进入某区域");
 }
 
