@@ -23,13 +23,19 @@
 
 - (void)locationManager:(CLLocationManager *)manager
          didEnterRegion:(CLRegion *)region{
+    self.inOrOut.text = @"欢迎进入到访";
     NSLog(@"进入某区域");
 }
 
 
 - (void)locationManager:(CLLocationManager *)manager
           didExitRegion:(CLRegion *)region{
-    NSLog(@"离开某区域");
+    self.inOrOut.text = @"期待下次到访";
+    NSLog(@"");
+}
+
+- (void)locationManager:(CLLocationManager*)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion*)region {
+    
 }
 
 - (void)locationManager:(CLLocationManager *)manager rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error{

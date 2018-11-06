@@ -52,7 +52,8 @@
     region.notifyOnEntry = YES;
     region.notifyEntryStateOnDisplay = YES;
     self.region = region;
-    [self.locationManager startRangingBeaconsInRegion:self.region];
+    [self.locationManager startMonitoringForRegion:self.region];
+    //[self.locationManager startRangingBeaconsInRegion:self.region];
 }
 
 - (IBAction)appDetail:(id)sender {

@@ -21,10 +21,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window.backgroundColor = [UIColor whiteColor];
+    /*self.window.backgroundColor = [UIColor whiteColor];
     self.window.bounds = [UIScreen mainScreen].bounds;
     UIViewController * temp = [[TestUIViewController alloc] init];
-    self.window.rootViewController = temp;
+    self.window.rootViewController = temp;*/
     return YES;
 }
 

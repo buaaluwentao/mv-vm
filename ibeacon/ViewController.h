@@ -14,5 +14,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *signalStrength;
 @property (weak, nonatomic) IBOutlet UILabel *proximity;
 @property (weak, nonatomic) IBOutlet UILabel *accuracy;
+
+@property (weak, nonatomic) IBOutlet UILabel *inOrOut;
+
+
 @end
 
